@@ -56,7 +56,20 @@ export default function ProductsMobile({ products }: { products: ProductCategory
           exit={{ opacity: 0, y: -10 }}
           className="mt-4 md:mt-12 bg-white rounded-lg shadow-md p-4 md:p-6"
         >
-          <div className="divide-y divide-gray-200">
+          <div 
+            className="divide-y divide-gray-200 max-h-[300px] overflow-y-auto"
+            onWheel={(e) => {
+              const element = e.currentTarget;
+              const { scrollTop, scrollHeight, clientHeight } = element;
+              const isAtTop = scrollTop === 0;
+              const isAtBottom = scrollTop + clientHeight >= scrollHeight;
+              
+              // If scrolling up and not at top, or scrolling down and not at bottom
+              if ((e.deltaY < 0 && !isAtTop) || (e.deltaY > 0 && !isAtBottom)) {
+                e.stopPropagation();
+              }
+            }}
+          >
             {(selectedCategory === "all" 
               ? products.flatMap(cat => cat.products)
               : products.find(cat => cat.name === selectedCategory)?.products || []

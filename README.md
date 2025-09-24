@@ -1,6 +1,6 @@
 # Le Petit Marché de Bruno 🛒
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-Visit%20Store-green)](https://marche-de-bruno.vercel.app/)
+[![Live Site](https://img.shields.io/badge/Live%20Site-Visit%20Store-green)](https://www.le-petit-marche-de-bruno.com)
 
 ## Overview
 
@@ -66,7 +66,7 @@ Le Petit Marché de Bruno is a modern e-commerce platform for a local grocery bu
 
 ## 🔄 Current Status
 
-The frontend is live at [marche-de-bruno.vercel.app](https://marche-de-bruno.vercel.app/) and actively being developed. Current focus areas:
+The frontend is live at [www.le-petit-marche-de-bruno.com](https://www.le-petit-marche-de-bruno.com) and actively being developed. Current focus areas:
 
 - Admin dashboard for product management
 - Integration of ordering system
